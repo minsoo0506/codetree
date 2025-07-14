@@ -14,9 +14,9 @@ public class Main {
             return true;
         } else if (is3Multiple(n)){
             return true;
+        } else {
+            return false;
         }
-
-        return false;
     }
 
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class Main {
         int B = sc.nextInt();
         // Please write your code here.
 
-        long count = 0;
+        int count = 0;
         for(int i = A; i <= B; i++){
             if(isMagicNum(i)) count++;
         }
