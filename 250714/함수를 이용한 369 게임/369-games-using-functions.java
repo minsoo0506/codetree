@@ -5,14 +5,16 @@ public class Main {
     }
 
     public static boolean isMagicNum(int n){
-        int digit1 = n / 10;
-        int digit2 = n % 10;
+        String strNum = String.valueOf(n);
+        char[] digit = strNum.toCharArray();
 
-        if(digit1 == 3 || digit1 == 6 || digit1 == 9){
-            return true;
-        } else if(digit2 == 3 || digit2 == 6 || digit2 == 9){
-            return true;
-        } else if (is3Multiple(n)){
+        for(int i = 0; i < digit.length; i++){
+            if(digit[i] == '3' || digit[i] == '6' || digit[i] == '9'){
+                return true;
+            }
+        }
+
+        if (is3Multiple(n)){
             return true;
         } else {
             return false;
