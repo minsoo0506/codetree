@@ -25,7 +25,7 @@ public class Main {
         int B = sc.nextInt();
         // Please write your code here.
 
-        int count = 0;
+        long count = 0;
         for(int i = A; i <= B; i++){
             if(isMagicNum(i)) count++;
         }
