@@ -3,6 +3,8 @@ public class Main {
     public static boolean isSubArray(int[] a, int[] b){
         boolean flag = false;
 
+        if(a.length < b.length) return flag;
+
         for(int i = 0; i < a.length - b.length; i++){
             if(a[i] == b[0]){
                 flag = true;
