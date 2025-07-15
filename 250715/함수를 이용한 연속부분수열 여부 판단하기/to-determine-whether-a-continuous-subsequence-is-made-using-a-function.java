@@ -5,7 +5,7 @@ public class Main {
 
         if(a.length < b.length) return flag;
 
-        for(int i = 0; i < a.length - b.length; i++){
+        for(int i = 0; i <= a.length - b.length; i++){
             if(a[i] == b[0]){
                 flag = true;
 
