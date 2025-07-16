@@ -21,7 +21,10 @@ public class Main {
                         }
                     }
 
-                    if(flag) idx = i;
+                    if(flag) {
+                        idx = i;
+                        return idx;
+                    }
                 }
             }
         }
