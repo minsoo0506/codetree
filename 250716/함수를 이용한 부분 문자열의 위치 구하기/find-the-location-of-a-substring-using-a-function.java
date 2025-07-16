@@ -10,7 +10,7 @@ public class Main {
 
         for(int i = 0; i < full.length; i++){
             if(part[0] == full[i]){
-                if(i + part.length > full.length) return idx;
+                if(i + part.length > full.length) break;
                 else {
                     boolean flag = true;
 
