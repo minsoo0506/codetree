@@ -22,7 +22,7 @@ public class Main {
         // Please write your code here.
 
         User codetree = new User("codetree", 10);
-        User hello = new User("hello", 28);
+        User hello = new User(id, level);
 
         codetree.print();
         hello.print();
