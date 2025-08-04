@@ -5,6 +5,11 @@ public class Main {
         int A = sc.nextInt();
         int B = sc.nextInt();
         int C = sc.nextInt();
+
+        if(A <= 11 && B <= 11 && C < 11) {
+            System.out.println(-1);
+            return;
+        }
         
         int endMinute = (A * 1440) + (B * 60) + C;
         int startMinute = (11 * 1440) + (11 * 60) + 11; 
