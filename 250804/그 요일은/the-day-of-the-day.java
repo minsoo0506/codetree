@@ -27,7 +27,7 @@ public class Main {
             if(index == Arrays.asList(day).indexOf(A)) count++;
 
             index++;
-            if(index == 6) index = 0;
+            if(index == 7) index = 0;
         }
 
         return count;
