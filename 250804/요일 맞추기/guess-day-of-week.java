@@ -20,8 +20,9 @@ public class Main {
         target += d2;
 
         int diff = target - base;
+        int index = ((diff % 7) + 7) % 7;
 
-        return day[(diff + 7) % 7];
+        return day[index];
     }
 
     public static void main(String[] args) {
