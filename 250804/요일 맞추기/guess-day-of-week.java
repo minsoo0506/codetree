@@ -2,31 +2,35 @@ import java.util.Scanner;
 
 public class Main {
     public static String calculateDay(int m1, int d1, int m2, int d2) {
-        int[] endDate = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
+        int[] daysInMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
         String[] day = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
-        int end = 0;
-        for(int i = 1; i <= m2; i++){
-            end += endDate[i];
+        // 기준일 (m1, d1)까지의 누적 날짜
+        int base = 0;
+        for (int i = 1; i < m1; i++) {
+            base += daysInMonth[i];
         }
-        end += d2;
+        base += d1;
 
-        int start = 0;
-        for(int i = 1; i <= m1; i++){
-            start += endDate[i];
+        // 목표일 (m2, d2)까지의 누적 날짜
+        int target = 0;
+        for (int i = 1; i < m2; i++) {
+            target += daysInMonth[i];
         }
-        start += d1;
+        target += d2;
 
-        return day[(end - start + 7) % 7];
+        int diff = target - base;
+
+        return day[(diff + 7) % 7];
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int m1 = sc.nextInt();
+        int m1 = sc.nextInt(); 
         int d1 = sc.nextInt();
-        int m2 = sc.nextInt();
-        int d2 = sc.nextInt();
-        
+        int m2 = sc.nextInt(); 
+        int d2 = sc.nextInt(); 
+
         System.out.println(calculateDay(m1, d1, m2, d2));
     }
 }
