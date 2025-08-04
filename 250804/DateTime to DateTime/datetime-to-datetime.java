@@ -11,6 +11,7 @@ public class Main {
 
         if(endMinute < startMinute) {
             System.out.println(-1);
+            return;
         }
 
         System.out.println(endMinute - startMinute);
