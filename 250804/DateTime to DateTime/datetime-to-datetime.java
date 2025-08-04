@@ -6,28 +6,9 @@ public class Main {
         int B = sc.nextInt();
         int C = sc.nextInt();
         
-        int count = 0;
+        int endMinute = (A * 1440) + (B * 60) + C;
+        int startMinute = (11 * 1440) + (11 * 60) + 11; 
 
-        int a = 11;
-        int b = 11;
-        int c = 11;
-        while(true) {
-            if(a == A && b == B && c == C) break;
-
-            if(c == 60) {
-                b++;
-                c = 0;
-            }
-
-            if(b == 24) {
-                a++;
-                b = 0;
-            }
-
-            c++;
-            count++;
-        }
-
-        System.out.println(count);
+        System.out.println(endMinute - startMinute);
     }
 }
