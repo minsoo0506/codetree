@@ -23,7 +23,7 @@ public class Main {
         int diff = target - base;
         int count = 0;
         int index = 0;
-        for(int i = 1; i <= diff; i++){
+        for(int i = 0; i <= diff; i++){
             if(index == Arrays.asList(day).indexOf(A)) count++;
 
             index++;
