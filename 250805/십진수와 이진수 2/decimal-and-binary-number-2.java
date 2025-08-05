@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-    public static int toBinary(int n){
+    public static long toBinary(int n){
         int[] binaryArr = new int[20];
         int index = 0;
 
@@ -19,7 +19,7 @@ public class Main {
             result.append(binaryArr[i]);
         }
 
-        return Integer.parseInt(result.toString());
+        return Long.parseLong(result.toString());
     }
 
     public static int toDecimal(int[] binaryArr){
