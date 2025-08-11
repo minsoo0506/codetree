@@ -1,23 +1,22 @@
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[100];
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
 
             for(int j = x1; j <= x2; j++){
-                arr[j]++;
+                map.put(j, map.getOrDefault(j, 0) + 1);
             }
         }
         
-        int result = 0;
-        for(int i = 1; i < arr.length; i++){
-            result = Math.max(result, arr[i]);
-        }
-
-        System.out.println(result);
+        System.out.println(Collections.max(map.values()));
     }
 }
