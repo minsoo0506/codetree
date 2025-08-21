@@ -4,10 +4,18 @@ public class Main {
     public static final int OFFSET = 1000;
     public static int[][] square;
 
-    public static void makeSquare(int x1, int y1, int x2, int y2, int type){
+    public static void makeSquare(int x1, int y1, int x2, int y2){
         for(int i = x1; i <= x2; i++){
             for(int j = y1; j <= y2; j++){
-                square[i][j] = type; // type이 1이면 첫번째 사각형, 0이면 두번째 사각형
+                square[i][j] = 1;
+            }
+        }
+    }
+
+    public static void deleteSquare(int x1, int y1, int x2, int y2){
+        for(int i = x1 + 1; i <= x2; i++){
+            for(int j = y1 + 1; j <= y2; j++){
+                square[i][j] = 0;
             }
         }
     }
@@ -41,13 +49,13 @@ public class Main {
         int rect1_y1 = sc.nextInt() + OFFSET;
         int rect1_x2 = sc.nextInt() + OFFSET;
         int rect1_y2 = sc.nextInt() + OFFSET;
-        makeSquare(rect1_x1, rect1_y1, rect1_x2, rect1_y2, 1);
+        makeSquare(rect1_x1, rect1_y1, rect1_x2, rect1_y2);
 
         int rect2_x1 = sc.nextInt() + OFFSET;
         int rect2_y1 = sc.nextInt() + OFFSET;
         int rect2_x2 = sc.nextInt() + OFFSET;
         int rect2_y2 = sc.nextInt() + OFFSET;
-        makeSquare(rect2_x1, rect2_y1, rect2_x2, rect2_y2, 0);
+        deleteSquare(rect2_x1, rect2_y1, rect2_x2, rect2_y2);
 
         System.out.println(getMinArea());
     }
