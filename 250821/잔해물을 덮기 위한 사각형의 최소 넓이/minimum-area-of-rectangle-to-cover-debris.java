@@ -13,8 +13,8 @@ public class Main {
     }
 
     public static void deleteSquare(int x1, int y1, int x2, int y2){
-        for(int i = x1 + 1; i <= x2; i++){
-            for(int j = y1 + 1; j <= y2; j++){
+        for(int i = x1 + 1; i < x2; i++){
+            for(int j = y1 + 1; j < y2; j++){
                 square[i][j] = 0;
             }
         }
