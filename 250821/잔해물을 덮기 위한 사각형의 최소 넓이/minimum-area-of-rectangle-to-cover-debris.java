@@ -5,8 +5,8 @@ public class Main {
     public static int[][] square;
 
     public static void makeSquare(int x1, int y1, int x2, int y2, int type){
-        for(int i = x1; i < x2; i++){
-            for(int j = y1; j < y2; j++){
+        for(int i = x1; i <= x2; i++){
+            for(int j = y1; j <= y2; j++){
                 square[i][j] = type; // type이 1이면 첫번째 사각형, 0이면 두번째 사각형
             }
         }
@@ -29,7 +29,7 @@ public class Main {
             }
         }
 
-        return (max_x + 1 - min_x) * (max_y + 1 - min_y);
+        return (max_x - min_x) * (max_y - min_y);
     }
 
     public static void main(String[] args) {
