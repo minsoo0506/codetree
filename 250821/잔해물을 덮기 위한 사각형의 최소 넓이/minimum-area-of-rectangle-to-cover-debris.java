@@ -26,9 +26,11 @@ public class Main {
         int max_x = 0;
         int max_y = 0;
 
+        boolean flag = false; // 첫번째 사각형의 모든 영역이 덮이는 경우 고려
         for(int i = 0; i <= 2000; i++){
             for(int j = 0; j <= 2000; j++){
                 if(square[i][j] == 1){
+                    flag = true;
                     if(min_x > i) min_x = i;
                     if(min_y > j) min_y = j;
                     if(max_x < i) max_x = i;
@@ -37,7 +39,7 @@ public class Main {
             }
         }
 
-        return (max_x - min_x) * (max_y - min_y);
+        return flag ? (max_x - min_x) * (max_y - min_y) : 0;
     }
 
     public static void main(String[] args) {
