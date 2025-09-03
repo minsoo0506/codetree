@@ -9,7 +9,7 @@ public class Main {
         for (int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
 
-        int maxCnt = 1;
+        int maxCnt = 0;
         int cnt = 1;
         for(int i = 1; i < n; i++){
             if(arr[i] > t && arr[i - 1] > t && arr[i] > arr[i - 1]){
