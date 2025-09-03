@@ -22,6 +22,8 @@ public class Main {
         }
 
         maxCnt = Math.max(maxCnt, cnt);
+
+        if(maxCnt == 1) maxCnt = 0;
         System.out.println(maxCnt);
     }
 }
