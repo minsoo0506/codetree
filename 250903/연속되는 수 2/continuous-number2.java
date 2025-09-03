@@ -12,6 +12,11 @@ public class Main {
         int max = 0;
         int cnt = 1;
         for(int i = 1; i < n; i++){
+            if(i == n - 1){
+                max = Math.max(max, cnt);
+                break;
+            }
+
             if(arr[i] != arr[i - 1]){
                 max = Math.max(max, cnt);
                 cnt = 1;
