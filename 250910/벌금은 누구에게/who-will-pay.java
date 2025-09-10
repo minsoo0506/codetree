@@ -13,7 +13,7 @@ public class Main {
 
             if(penalizedPerson[num] >= k){
                 System.out.println(num);
-                break;
+                return;
             }
         }
 
