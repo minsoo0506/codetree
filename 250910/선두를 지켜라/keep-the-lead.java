@@ -56,7 +56,8 @@ public class Main {
         int result = 0;
         char lead = 'A';
         for(int i = 1; i <= endOfTime; i++) {
-            if(measure[i][0] < measure[i][1]) {
+            if(measure[i][0] == measure[i][1]) continue;
+            else if(measure[i][0] < measure[i][1]) {
                 if(lead == 'A'){
                     result++;
                 }
